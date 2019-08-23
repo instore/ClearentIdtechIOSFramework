@@ -2451,22 +2451,6 @@ Sets seconds of idle that must pass before entering sleep mode
 
 -(RETURN_CODE) getBCDMaskChar:(NSString**)response;
 
-/**
- * Set BCD Mask Character
- UniPay
- 
- *
- Executes a command to set the ASCII Masking Character.
- *
- @param mask Masking character. Range is 0x0A - 0x0F.
- - Default character is 0x0C
- 
- * @return RETURN_CODE:  Return codes listed as typedef enum in IDTCommon:RETURN_CODE.  Values can be parsed with IDT_Device::device_getResponseCodeString:()
- 
- */
-
--(RETURN_CODE) setBCDMaskChar:(char)mask;
-
 /*
 *
 * Restores the default ICC group settings
