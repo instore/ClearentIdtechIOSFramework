@@ -58,7 +58,7 @@
     return [[IDT_VP3300 sharedController]  device_connectToAudioReader];
 }
 
--(RETURN_CODE) device_getFirmwareVersion:(NSString**)response {
+-(RETURN_CODE) device_getFirmwareVersion:(NSString* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] device_getFirmwareVersion:response];
 }
 
@@ -82,7 +82,7 @@
     return [[IDT_VP3300 sharedController] device_isConnected:device];
 }
 
--(RETURN_CODE) device_sendIDGCommand:(unsigned char)command subCommand:(unsigned char)subCommand data:(NSData*)data response:(NSData**)response {
+-(RETURN_CODE) device_sendIDGCommand:(unsigned char)command subCommand:(unsigned char)subCommand data:(NSData*)data response:(NSData* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] device_sendIDGCommand:command subCommand:subCommand data:data response:response];
 }
 
@@ -114,7 +114,7 @@
     [[IDT_VP3300 sharedController] emv_disableAutoAuthenticateTransaction:disable];
 }
 
--(RETURN_CODE) emv_getEMVL2Version:(NSString**)response {
+-(RETURN_CODE) emv_getEMVL2Version:(NSString* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] emv_getEMVL2Version:response];
 }
 
@@ -134,11 +134,11 @@
     return [[IDT_VP3300 sharedController] emv_removeTerminalData];
 }
 
--(RETURN_CODE) emv_retrieveAIDList:(NSArray**)response {
+-(RETURN_CODE) emv_retrieveAIDList:(NSArray* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] emv_retrieveAIDList:response];
 }
 
--(RETURN_CODE) emv_retrieveApplicationData:(NSString*)AID response:(NSDictionary**)responseAID {
+-(RETURN_CODE) emv_retrieveApplicationData:(NSString*)AID response:(NSDictionary* __autoreleasing *)responseAID {
     return [[IDT_VP3300 sharedController] emv_retrieveApplicationData:AID response:responseAID];
 }
 
@@ -146,23 +146,23 @@
     return [[IDT_VP3300 sharedController] emv_retrieveCAPK:rid index:index response:response];
 }
 
--(RETURN_CODE) emv_retrieveCAPKFile:(NSString*)rid index:(NSString*)index response:(NSData**)response {
+-(RETURN_CODE) emv_retrieveCAPKFile:(NSString*)rid index:(NSString*)index response:(NSData* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] emv_retrieveCAPKFile:rid index:index response:response];
 }
 
--(RETURN_CODE) emv_retrieveCAPKList:(NSArray**)response {
+-(RETURN_CODE) emv_retrieveCAPKList:(NSArray* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] emv_retrieveCAPKList:response];
 }
 
--(RETURN_CODE) emv_retrieveCRLList:(NSMutableArray**)response {
+-(RETURN_CODE) emv_retrieveCRLList:(NSMutableArray* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] emv_retrieveCRLList:response];
 }
 
--(RETURN_CODE) emv_retrieveTerminalData:(NSDictionary**)responseData {
+-(RETURN_CODE) emv_retrieveTerminalData:(NSDictionary* __autoreleasing *)responseData {
     return [[IDT_VP3300 sharedController] emv_retrieveTerminalData:responseData];
 }
 
--(RETURN_CODE) emv_retrieveTransactionResult:(NSData*)tags retrievedTags:(NSDictionary**)retrievedTags {
+-(RETURN_CODE) emv_retrieveTransactionResult:(NSData*)tags retrievedTags:(NSDictionary* __autoreleasing *)retrievedTags {
     return [[IDT_VP3300 sharedController] emv_retrieveTransactionResult:tags retrievedTags:retrievedTags];
 }
 
@@ -191,11 +191,11 @@
     return emvStartRt;
 }
 
--(RETURN_CODE) config_getSerialNumber:(NSString**)response {
+-(RETURN_CODE) config_getSerialNumber:(NSString* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] config_getSerialNumber:response];
 }
 
--(RETURN_CODE) icc_exchangeAPDU:(NSData*)dataAPDU response:(APDUResponse**)response {
+-(RETURN_CODE) icc_exchangeAPDU:(NSData*)dataAPDU response:(APDUResponse* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] icc_exchangeAPDU:dataAPDU response:response];
 }
 
@@ -203,11 +203,11 @@
     return [[IDT_VP3300 sharedController] icc_getICCReaderStatus:readerStatus];
 }
 
--(RETURN_CODE) icc_powerOnICC:(NSData**)response {
+-(RETURN_CODE) icc_powerOnICC:(NSData* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] icc_powerOnICC:response];
 }
 
--(RETURN_CODE) icc_powerOffICC:(NSString**)error {
+-(RETURN_CODE) icc_powerOffICC:(NSString* __autoreleasing *)error {
     return [[IDT_VP3300 sharedController] icc_powerOffICC:error];
 }
 
@@ -227,7 +227,7 @@
      return [[IDT_VP3300 sharedController] assignBypassDelegate:del];
 }
 
--(RETURN_CODE) ctls_getConfigurationGroup:(int)group response:(NSDictionary**)response {
+-(RETURN_CODE) ctls_getConfigurationGroup:(int)group response:(NSDictionary* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] ctls_getConfigurationGroup:group response:response];
 }
 
@@ -247,23 +247,23 @@
     return [[IDT_VP3300 sharedController] ctls_removeConfigurationGroup:group ];
 }
 
--(RETURN_CODE) ctls_retrieveAIDList:(NSArray**)response {
+-(RETURN_CODE) ctls_retrieveAIDList:(NSArray* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] ctls_retrieveAIDList:response];
 }
 
--(RETURN_CODE)  ctls_retrieveApplicationData:(NSString*)AID response:(NSDictionary**)response {
+-(RETURN_CODE)  ctls_retrieveApplicationData:(NSString*)AID response:(NSDictionary* __autoreleasing *)response {
     return [[IDT_VP3300 sharedController] ctls_retrieveApplicationData:AID response:response];
 }
 
--(RETURN_CODE)  ctls_retrieveCAPK:(NSData*)capk key:(NSData**)key {
+-(RETURN_CODE)  ctls_retrieveCAPK:(NSData*)capk key:(NSData* __autoreleasing *)key {
     return [[IDT_VP3300 sharedController] ctls_retrieveCAPK:capk key:key];
 }
 
--(RETURN_CODE)  ctls_retrieveCAPKList:(NSArray**)keys {
+-(RETURN_CODE)  ctls_retrieveCAPKList:(NSArray* __autoreleasing *)keys {
     return [[IDT_VP3300 sharedController] ctls_retrieveCAPKList:keys];
 }
 
--(RETURN_CODE)  ctls_retrieveTerminalData:(NSData**)tlv {
+-(RETURN_CODE)  ctls_retrieveTerminalData:(NSData* __autoreleasing *)tlv {
     return [[IDT_VP3300 sharedController] ctls_retrieveTerminalData:tlv];
 }
 
@@ -299,7 +299,7 @@
     return [[IDT_VP3300 sharedController] device_enableBLEDeviceSearch:identifier];
 }
 
--(RETURN_CODE)  device_getAutoPollTransactionResults:(IDTEMVData**)result {
+-(RETURN_CODE)  device_getAutoPollTransactionResults:(IDTEMVData* __autoreleasing *)result {
     return [[IDT_VP3300 sharedController] device_getAutoPollTransactionResults:result];
 }
 

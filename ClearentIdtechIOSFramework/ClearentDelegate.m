@@ -13,6 +13,9 @@
 #import "Teleport.h"
 #import "ClearentCache.h"
 
+int getEntryMode (NSString* rawEntryMode);
+BOOL isSupportedEmvEntryMode (int entryMode);
+
 static NSString *const TRACK2_DATA_EMV_TAG = @"57";
 static NSString *const TRACK1_DATA_EMV_TAG = @"56";
 static NSString *const TRACK2_DATA_CONTACTLESS_NON_CHIP_TAG = @"9F6B";
