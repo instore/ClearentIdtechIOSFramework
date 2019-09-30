@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ClearentEmvConfigurator.h"
-#import <IDTech/IDTUtility.h>
+#import "IDTUtility.h"
 #import "Teleport.h"
 
 static NSString *const EMV_DIP_ENTRY_MODE_TAG = @"05";

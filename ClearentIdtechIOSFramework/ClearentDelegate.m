@@ -8,7 +8,7 @@
 
 #import "ClearentDelegate.h"
 #import "ClearentConfigurator.h"
-#import "IDTech/IDTUtility.h"
+#import "IDTUtility.h"
 #import "ClearentUtils.h"
 #import "Teleport.h"
 #import "ClearentCache.h"

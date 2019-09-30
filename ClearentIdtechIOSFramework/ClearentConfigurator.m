@@ -7,7 +7,7 @@
 //
 
 #import "ClearentConfigurator.h"
-#import <IDTech/IDTUtility.h>
+#import "IDTUtility.h"
 #import "Teleport.h"
 
 static NSString *const NSUSERDEFAULT_DEVICESERIALNUMBER = @"DeviceSerialNumber";

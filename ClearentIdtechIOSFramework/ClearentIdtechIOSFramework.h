@@ -5,12 +5,10 @@
 //  Created by David Higginbotham on 5/3/18.
 //  Copyright © 2018 Clearent, L.L.C. All rights reserved.
 //
-#import "ClearentIdtechIOSFramework/Clearent_VP3300.h"
-#import "ClearentIdtechIOSFramework/ClearentManualEntry.h"
+#import "Clearent_VP3300.h"
+#import "ClearentManualEntry.h"
 
-#import "ClearentIdtechIOSFramework/ClearentPublicVP3300Delegate.h"
-#import "ClearentIdtechIOSFramework/ClearentManualEntryDelegate.h"
-#import "ClearentIdtechIOSFramework/ClearentCard.h"
-#import "ClearentIdtechIOSFramework/ClearentManualEntry.h"
-
-#import <IDTech/IDTech.h>
+#import "ClearentPublicVP3300Delegate.h"
+#import "ClearentManualEntryDelegate.h"
+#import "ClearentCard.h"
+#import "ClearentManualEntry.h"
