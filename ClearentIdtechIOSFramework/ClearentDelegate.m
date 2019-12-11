@@ -17,6 +17,7 @@
 
 int getEntryMode (NSString* rawEntryMode);
 BOOL isSupportedEmvEntryMode (int entryMode);
+BOOL isEncryptedTransaction (NSDictionary* encryptedTags);
 
 static NSString *const TRACK2_DATA_EMV_TAG = @"57";
 static NSString *const TRACK1_DATA_EMV_TAG = @"56";
