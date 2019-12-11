@@ -275,19 +275,19 @@ ClearentContactlessConfigurator* _clearentContactlessConfigurator;
     [self notifyInfo:@"Contactless Configuration - Add Groups (1 of 3)"];
     contactlessConfigurationReturnCode = [_clearentContactlessConfigurator configureGroups:clearentConfiguration.contactlessGroups sharedController:sharedController];
     if(contactlessConfigurationReturnCode != CONTACTLESS_CONFIGURATION_SUCCESS) {
-         [self notifyError:[NSString stringWithFormat:@"Contactless Configuration - Add groups Failed %@", [ClearentContactlessConfigurator  getReturnCodeDisplayName: contactlessConfigurationReturnCode]]];
+        [self notifyError:[NSString stringWithFormat:@"Contactless Configuration - Add groups Failed %@", [ClearentContactlessConfigurator  getReturnCodeDisplayName: (int)contactlessConfigurationReturnCode]]];
         return contactlessConfigurationReturnCode;
     }
     [self notifyInfo:@"Contactless Configuration - Add Application Ids (2 of 3)"];
     contactlessConfigurationReturnCode = [_clearentContactlessConfigurator configureAids:clearentConfiguration.contactlessAids sharedController:sharedController];
     if(contactlessConfigurationReturnCode != CONTACTLESS_CONFIGURATION_SUCCESS) {
-        [self notifyError:[NSString stringWithFormat:@"Contactless Configuration - Add Application Ids Failed %@", [ClearentContactlessConfigurator  getReturnCodeDisplayName: contactlessConfigurationReturnCode]]];
+        [self notifyError:[NSString stringWithFormat:@"Contactless Configuration - Add Application Ids Failed %@", [ClearentContactlessConfigurator  getReturnCodeDisplayName: (int)contactlessConfigurationReturnCode]]];
         return contactlessConfigurationReturnCode;
     }
      [self notifyInfo:@"Contactless Configuration - Add Public Keys (3 of 3)"];
     contactlessConfigurationReturnCode = [_clearentContactlessConfigurator configureCapks:clearentConfiguration.contactlessPublicKeys sharedController:sharedController];
     if(contactlessConfigurationReturnCode != CONTACTLESS_CONFIGURATION_SUCCESS) {
-        [self notifyError:[NSString stringWithFormat:@"Contactless Configuration - Add Public Keys Failed %@", [ClearentContactlessConfigurator  getReturnCodeDisplayName: contactlessConfigurationReturnCode]]];
+        [self notifyError:[NSString stringWithFormat:@"Contactless Configuration - Add Public Keys Failed %@", [ClearentContactlessConfigurator  getReturnCodeDisplayName: (int)contactlessConfigurationReturnCode]]];
         return contactlessConfigurationReturnCode;
     }
     [self notifyInfo:@"Contactless Configuration done"];
