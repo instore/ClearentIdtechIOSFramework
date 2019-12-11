@@ -556,7 +556,7 @@
                if (RETURN_CODE_DO_SUCCESS == cancelTransactionRt) {
                    [Teleport logInfo:@"workaroundCardSeatedIssue:transaction cancelled"];
                    ICCReaderStatus* icc_getICCReaderStatusResponse;
-                   RETURN_CODE icc_getICCReaderStatusRt2 = [[IDT_VP3300 sharedController] icc_getICCReaderStatus:&icc_getICCReaderStatusResponse];
+                   [[IDT_VP3300 sharedController] icc_getICCReaderStatus:&icc_getICCReaderStatusResponse];
                    if(icc_getICCReaderStatusResponse != nil) {
                        if(icc_getICCReaderStatusResponse->cardSeated) {
                            [Teleport logInfo:@"workaroundCardSeatedIssue:Card is still seated"];
