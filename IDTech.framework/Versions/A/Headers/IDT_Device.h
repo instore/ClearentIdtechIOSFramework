@@ -2553,8 +2553,9 @@ Sets seconds of idle that must pass before entering sleep mode
  * @return RETURN_CODE:  Return codes listed as typedef enum in IDTCommon:RETURN_CODE.  Values can be parsed with IDT_Device::device_getResponseCodeString:()
  
  */
+// note from Shaun: this is declared twice in this file with different header comments.
+//-(RETURN_CODE) setBCDMaskChar:(char)mask;
 
--(RETURN_CODE) setBCDMaskChar:(char)mask;
 /**
  * Set ASCII Mask Character
  UniPay
